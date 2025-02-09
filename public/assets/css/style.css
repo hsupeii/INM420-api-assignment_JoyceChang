@@ -1,0 +1,174 @@
+/* font */
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    margin: 0 auto;
+    background: url('/assets/images/bg.jpg');
+    background-size: cover;
+    background-position: center top;
+    background-repeat: repeat-x;
+    background-attachment: fixed;
+    text-align: center;
+    display: flex;
+    align-content: center;
+    flex-direction: column;
+    justify-content: center;
+    font-family: "Inter", serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+    color: rgb(45, 45, 45);
+}
+
+.wrapper {
+    width: calc(100% - 2em);
+    display: flex;
+    flex-direction: column;
+    backdrop-filter: blur(5px);
+    background-color: rgba(255, 255, 255, .3);
+    margin: 1em auto;
+    border-radius: 20px;
+    padding: 2em 0;
+    box-shadow: 3px 3px 20px rgba(75, 72, 85, 0.1);
+}
+
+/* toronto data */
+#td-time {
+    margin-top: 0;
+}
+
+#td-title {
+    font-size: 3em;
+    font-weight: 600;
+}
+
+#td-temp {
+    font-size: 2.5em;
+    margin-top: 0.5em;
+    font-weight: 300;
+    font-style: italic;
+}
+
+#td-info img {
+    margin: 0 auto;
+}
+
+#td-info h3 {
+    margin-top: 0;
+}
+
+
+/* week forecast */
+.week-forecast {
+    width: 100%;
+    margin-top: 1.5em;
+}
+
+#next-7-days {
+    list-style: none;
+    width: calc(100% - 2em);
+    max-width: 800px;
+    display: inline-flex;
+    overflow-x: scroll;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    background-color: rgba(255, 255, 255, .3);
+    padding: 0 20px;
+    padding-bottom: 1em;
+    border-radius: 1em;
+}
+
+/* 7days data */
+.forecast-day {
+    margin: 0 1em;
+    width: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+}
+
+.forecast-day img {
+    width: 100%;
+    max-width: 80px;
+    height: auto;
+    line-height: 100%;
+    margin: 0 auto;
+}
+
+.other-data {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    flex-direction: row;
+    width: calc(100% - 2em);
+    margin: 0 auto;
+}
+
+/* other 4 data */
+.other-data div {
+    width: calc(50% - 0.5em);
+    border-radius: 1em;
+    align-items: center;
+    background-color: rgba(255, 255, 255, .4);
+    padding: 1em;
+    margin: 0.5em 0;
+}
+
+.other-data p {
+    font-weight: bold;
+    font-size: 1.3em;
+    margin-top: 0;
+}
+
+.other-data span {
+    font-style: italic;
+    font-size: 1.3em;
+}
+
+
+/* -----desktop----- */
+
+@media only screen and (min-width: 650px) {
+
+    .wrapper {
+        max-width: 1000px;
+    }
+
+
+    #next-7-days {
+        justify-content: center;
+        overflow-x: hidden;
+        padding: 0 40px;
+        padding-bottom: 1em;
+    }
+
+    .forecast-day {
+        margin: 0 .3em;
+
+    }
+
+    .other-data {
+
+        max-width: 800px;
+    }
+
+    .other-data div {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        padding: 1.5em 3em;
+    }
+
+    .other-data p {
+        margin-right: 2em;
+    }
+
+}
